@@ -7,38 +7,38 @@
 #
 
 
-get_weather <- function(city){
+get_weather <- function(city,api){
   require(httr)
   require(ggplot)
   require(tidyverse)
-  
+
   #use public api to grab data
-  url <- GET(paste0("api.openweathermap.org/data/2.5/forecast?q=",city,"&appid=ea4a67edc7fc8631bf71089ab4ec1c09"))
+  url <- GET(paste0("api.openweathermap.org/data/2.5/forecast?q=",city,api))
   data <- content(url)
-  
+
   # load time
   time <- rep(0,8)
   for (i in seq(1,8)){
     time[i] <- substr(strsplit(data$list[[i]]$dt_txt," ")[[1]][2],1,5)
   }
-  
+
   # load temperature
   temp <- rep(0,8)
   for (i in seq(1,8)){
     temp[i] <- data$list[[i]]$main$temp-273.15
   }
   temp <- round(temp,digits = 1)
-  
+
   # load humidity
   humidity <- rep(0,8)
   for (i in seq(1,8)){
     humidity[i] <- data$list[[i]]$main$humidity*0.1
   }
   humidity
-  
+
   #create a data frame of every variables
   dataframe <- data.frame(time,temp,humidity)
-  
+
   # create pictures
   p <- ggplot(dataframe,aes(x = time))+
     geom_point(aes(y = temp),color = "blue",size  =2)+

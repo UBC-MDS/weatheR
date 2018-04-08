@@ -46,7 +46,3 @@ get_weather_four_days<- function(appid, city){
   return (weather)
 }
 
-appid <- "30fa7fb8f61487eb20b39289b6726d29"
-city <- "Vancouver"
-van <- get_weather_four_days(appid, city)
-

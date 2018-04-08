@@ -1,6 +1,6 @@
 context("Testing get_weather_four_days function")
 
-good_appid <- "30fa7fb8f61487eb20b39289b6726d29"
+good_appid <- "correctappid"
 good_city <- "Toronto"
 
 bad_appid <- ""

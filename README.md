@@ -4,14 +4,14 @@
 
 ### Contributors
 
-* Fang Yang
-* Susan Fung (@fyang95)
+* Fang Yang (@fyang95)
+* Susan Fung 
 * Ted Thompson (@TeddTech)
 * Tina Qian
 
 ### Overview
 
-This package will include 4 functions: `distmap()` `cloudmap()` `get_weather()` `get_weather_four_days()`
+This package provides four useful wrapper functions around the [OpenWeatherMap API](https://openweathermap.org/). The four functions are: `distmap()`, `cloudmap()`, `get_weather()` and `get_weather_four_days()`
 
 * `distmap(api, 'city1', 'city2')`: Calculate distance between two cities
 

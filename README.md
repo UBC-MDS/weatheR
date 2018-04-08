@@ -1,6 +1,6 @@
 # weatheR
     
-[![Build Status]()
+[![Build Status](https://travis-ci.org/UBC-MDS/weatheR.svg?branch=master)](https://travis-ci.org/UBC-MDS/weatheR)
 
 ### Contributors
 

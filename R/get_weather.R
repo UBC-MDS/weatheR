@@ -9,11 +9,19 @@
 
 get_weather <- function(city,api){
   require(httr)
-  require(ggplot)
-  require(tidyverse)
+  require(ggplot2)
+  require(dplyr)
+  require(tidyr)
 
   #use public api to grab data
-  url <- GET(paste0("api.openweathermap.org/data/2.5/forecast?q=",city,api))
+  url <- GET(paste0("api.openweathermap.org/data/2.5/forecast?q=",city,"&appid=",api))
+  if (status_code(url) == 404){
+    stop("wrong city name")
+  }
+  else if (status_code(url) == 401){
+    stop("wrong API")
+  }
+
   data <- content(url)
 
   # load time

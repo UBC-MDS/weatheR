@@ -1,0 +1,24 @@
+---
+title: "get_weather_four_days"
+author: "Susan Fung"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+## Description
+Retrieve 4-day weather forecast from the [OpenWeatherMap API](https://openweathermap.org/). Returns a data frame containing temp_min, temp_max, humidity and weather for the next 4 days in city local time. Temperature in Celsius
+
+## Usage
+`get_weather_four_days(appid, city)`
+
+## Arguments
+`appid` API Key for openweathermap.org. Get one here: http://openweathermap.org/appid
+`city`  City name and country code divided by comma, use ISO 3166 country codes
+
+## Example
+`get_weather_four_days(your_appid, "Vancouver")`
+

@@ -8,4 +8,5 @@ License: MIT
 Encoding: UTF-8
 LazyData: true
 Imports:
-  testthat (>= 2.0.0)
+  testthat (>= 2.0.0),
+  httr (>= 2.3.1)

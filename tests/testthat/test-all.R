@@ -7,7 +7,7 @@ wrong_city_name <- "aaa"
 wrong_api <- "aaa"
 
 test_that("Wrong city name",{
-  expect_error(get_weather(wrong_city_name, wrong_api),"wrong city name") #test if the city name is correct
+  expect_error(get_weather(wrong_city_name, good_api),"wrong city name") #test if the city name is correct
 })
 
 test_that("Wrong API",{
@@ -15,7 +15,7 @@ test_that("Wrong API",{
 })
 
 test_that("Check data integrity",{
-  result<-get_weather_four_days(good_city_name, good_api)
+  result<-get_weather(good_city_name, good_api)
 
   # Expected outputs
   expect_equal(is.data.frame(result), TRUE) # output is a data frame

@@ -1,21 +1,12 @@
-Title: Weather functions using the openweathermap.org API
-Version: 0.1
-Authors@R: c(
-  person("Susan", "Fung", email = "susanfung2018@alumni.ubc.ca", role = c("aut")),
-  person("Fang", "Yang", email = "fangyang@alumni.ubc.ca", role = c("aut")),
-  person("Ted", "Thompson", email = "tedthompson@alumni.ubc.ca", role = c("aut", "cre")),
-  person("Tina", "Qian", email = "tinaqian@alumni.ubc.ca", role = c("aut"))
-  )
-Description: This package provides four useful wrapper functions around the [OpenWeatherMap API](https://openweathermap.org/).
+Package: weatherR
+Title: What the Package Does (one line, title case)
+Version: 0.0.0.9000
+Authors@R: person("First", "Last", email = "first.last@example.com", role = c("aut", "cre"))
+Description: What the package does (one paragraph).
 Depends: R (>= 3.4.1)
-Imports:
-  testthat (>= 2.0.0),
-  httr (>= 1.3.1)
 License: MIT
 Encoding: UTF-8
 LazyData: true
-Suggests:
-    knitr,
-    rmarkdown
-RoxygenNote: 6.0.1
-VignetteBuilder: knitr
+Imports:
+  testthat (>= 2.0.0),
+  httr (>= 1.3.1)

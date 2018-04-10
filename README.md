@@ -1,13 +1,13 @@
 # weatheR
     
-[![Build Status](https://travis-ci.org/TinaQian2017/weatheR.svg?branch=master)](https://travis-ci.org/TinaQian2017/weatheR)
+[![Build Status](https://travis-ci.org/UBC-MDS/weatheR.svg?branch=master)](https://travis-ci.org/UBC-MDS/weatheR)
 
 ### Contributors
 
 * Fang Yang (@fyang95)
-* Susan Fung
+* Susan Fung 
 * Ted Thompson (@TeddTech)
-* Tina Qian (@TinaQian2017)
+* Tina Qian
 
 ### Overview
 

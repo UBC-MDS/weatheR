@@ -48,14 +48,14 @@ get_weather <- function(city,api){
   dataframe <- data.frame(time,temp,humidity)
 
   # create pictures
-  p <- ggplot(dataframe,aes(x = time))+
-    geom_point(aes(y = temp),color = "blue",size  =2)+
-    geom_text(aes(y=temp, label = paste0(temp,"C")), vjust=2)+
-    geom_line(aes(y = temp, group = 1), color = "blue")+
-    geom_bar(aes(y=humidity),stat = "identity",alpha = 0.5)+
-    geom_text(aes(y=humidity, label = humidity*10), vjust=2)+
-    scale_y_continuous(sec.axis = sec_axis(~.*5, name = "Humidity"))+
-    labs(x = "Time", y = "Temperature")+
-    ggtitle(paste0("Weather of ",city))
-  return(p)
+  #p <- ggplot(dataframe,aes(x = time))+
+  #  geom_point(aes(y = temp),color = "blue",size  =2)+
+  #  geom_text(aes(y=temp, label = paste0(temp,"C")), vjust=2)+
+  #  geom_line(aes(y = temp, group = 1), color = "blue")+
+  #  geom_bar(aes(y=humidity),stat = "identity",alpha = 0.5)+
+  #  geom_text(aes(y=humidity, label = humidity*10), vjust=2)+
+  #  scale_y_continuous(sec.axis = sec_axis(~.*5, name = "Humidity"))+
+  #  labs(x = "Time", y = "Temperature")+
+  #  ggtitle(paste0("Weather of ",city))
+  return(dataframe)
 }

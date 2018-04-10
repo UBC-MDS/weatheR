@@ -1,7 +1,7 @@
 library(testthat)
-library(weatheR)
+library(weatherR)
 library(httr)
 library(dplyr)
 library(tidyr)
 
-test_check("weatheR")
+test_check("weatherR")

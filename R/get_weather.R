@@ -9,7 +9,7 @@
 
 get_weather <- function(city,api){
   require(httr)
-  require(ggplot2)
+  #require(ggplot2)
   require(dplyr)
   require(tidyr)
 

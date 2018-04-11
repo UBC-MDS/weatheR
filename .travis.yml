@@ -1,7 +1,6 @@
-language: R
-sudo: false
+warnings_are_errors: FALSE
+language: r
+sudo: FALSE
 cache: packages
-warnings_are_errors: false
-
-r:
-- release
+after_success:
+  - Rscript -e 'covr::codecov()'

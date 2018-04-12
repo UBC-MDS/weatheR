@@ -10,11 +10,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<meta name="author" content="Susan Fung" />
+<meta name="author" content="Susan Fung, Ted Thompson, Tina Qian, Fang Yang" />
 
-<meta name="date" content="2018-04-08" />
+<meta name="date" content="2018-04-12" />
 
-<title>get_weather_four_days</title>
+<title>weatheR</title>
 
 
 
@@ -30,27 +30,37 @@
 
 
 
-<h1 class="title toc-ignore">get_weather_four_days</h1>
-<h4 class="author"><em>Susan Fung</em></h4>
-<h4 class="date"><em>2018-04-08</em></h4>
+<h1 class="title toc-ignore">weatheR</h1>
+<h4 class="author"><em>Susan Fung, Ted Thompson, Tina Qian, Fang Yang</em></h4>
+<h4 class="date"><em>2018-04-12</em></h4>
 
 
 
 <div id="description" class="section level2">
 <h2>Description</h2>
-<p>Retrieve 4-day weather forecast from the <a href="https://openweathermap.org/">OpenWeatherMap API</a>. Returns a data frame containing temp_min, temp_max, humidity and weather for the next 4 days in city local time. Temperature in Celsius</p>
-</div>
-<div id="usage" class="section level2">
-<h2>Usage</h2>
-<p><code>get_weather_four_days(appid, city)</code></p>
-</div>
-<div id="arguments" class="section level2">
-<h2>Arguments</h2>
-<p><code>appid</code> API Key for openweathermap.org. Get one here: <a href="http://openweathermap.org/appid" class="uri">http://openweathermap.org/appid</a> <code>city</code> City name and country code divided by comma, use ISO 3166 country codes</p>
+<p>This package provides four useful wrapper functions around the <a href="https://openweathermap.org/">OpenWeatherMap API</a>. The four functions are: <code>distmap()</code>, <code>cloudmap()</code>, <code>get_weather()</code>, <code>get_weather_four_days()</code> and <code>cwd()</code>.</p>
 </div>
 <div id="example" class="section level2">
 <h2>Example</h2>
-<p><code>get_weather_four_days(your_appid, &quot;Vancouver&quot;)</code></p>
+<pre><code># load package
+library(weatheR)
+
+api &lt;- &quot;&amp;APPID=8196eccade1594d99afd30e0924dca7d&quot;
+
+# Calculate distance between two cities
+distmap(api, 'vancouver', 'toronto')
+
+# Returns a plot showing how dense clouds are in the area
+cloudmap(api, 'alberta', dense = 0.2 )
+
+# Returns weather forecast for the next 24 hours for selected city
+get_weather(api, vancouver):
+
+# Returns 4-day weather forecast for selected city
+get_weather_four_days(api, 'vancouver')
+
+# Get current weather description
+cwd(api,&quot;vancouver&quot;)</code></pre>
 </div>
 
 

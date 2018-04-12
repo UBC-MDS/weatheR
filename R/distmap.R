@@ -29,7 +29,7 @@ distmap <- function(api, city1, city2) {
   lat2 <-  ow$coord$lat
   lon2 <-  ow$coord$lon
 
-  D <- distm(c(lon1, lat1), c(lon2, lat2))
+  D <- geosphere::distm(c(lon1, lat1), c(lon2, lat2))
   r <- paste("The distance between", city1, "and", city2, "is", D, "km")
   return(r)
 

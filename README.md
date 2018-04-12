@@ -7,9 +7,9 @@
 ### Contributors
 
 * Fang Yang (@fyang95)
-* Susan Fung 
+* Susan Fung (@susan-fung)
 * Ted Thompson (@TeddTech)
-* Tina Qian
+* Tina Qian (@TinaQian2017)
 
 ### Overview
 

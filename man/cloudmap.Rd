@@ -2,7 +2,7 @@
 % Please edit documentation in R/cloudmap.R
 \name{cloudmap}
 \alias{cloudmap}
-\title{distmap(api, city1, city2)}
+\title{cloudmap(api, city, dense)}
 \usage{
 cloudmap(api, city, country = "", dense = 0.2)
 }
@@ -19,4 +19,3 @@ A 2 by 2 plot latitude and longitude plot of points where the transparancy of th
 \description{
 Returns a plot of how dense clouds are in a given area
 }
-

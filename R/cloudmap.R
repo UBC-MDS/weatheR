@@ -13,6 +13,9 @@
 
 
 cloudmap <- function(api, city, country='', dense=0.2) {
+  require(ggplot2)
+  require(dplyr)
+  require(httr)
   if (country!='') {
     url <-  paste0('http://api.openweathermap.org/data/2.5/weather?q=',city,',',country,'&APPID=',api)
   }else{

@@ -9,8 +9,7 @@
 #' @return Distance between two cities in km
 #' @export
 #'
-#' @examples
-#'distmap(api, 'vancouver', 'toronto')
+
 
 
 distmap <- function(api, city1, city2) {

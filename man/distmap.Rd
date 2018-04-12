@@ -19,6 +19,4 @@ Distance between two cities in km
 \description{
 Returns distance between two cities.
 }
-\examples{
-distmap(api, 'vancouver', 'toronto')
-}
+

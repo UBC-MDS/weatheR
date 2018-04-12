@@ -1,4 +1,4 @@
-context("Testing distmap")
+context("Testing cloudmap")
 
 api <- '02c3680b276051044255784768becd85'
 a <- content(GET(paste0("http://api.openweathermap.org/data/2.5/weather?q=toronto&APPID=",api)))

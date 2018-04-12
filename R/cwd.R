@@ -23,11 +23,8 @@ cwd<-function(key,location){
   data<-httr::content(text)
 
   # extract information from data
-  info<-paste("The weather status in",
-              paste0(data$name,","),data$sys$country,paste0("(",paste("Latitude:",paste0(data$coord$lat,",") ,"Longitude:",data$coord$lon),")"),
-              "is",paste0(data$weather[[1]]$description,","),"with mean temperature",paste0(data$main$temp-273.15,"°C,"),
-              "humidity",paste0(data$main$humidity,","),
-              "visibility",paste0(data$visibility,","),
-              "and wind speed",paste0(data$wind$speed,"."))
+  info<-paste0("The weather status in", data$name, ",", data$sys$country, "(Latitude:", data$coord$lat,", Longitude:", 
+               data$coord$lon,") is", data$weather[[1]]$description,", with mean temperature", data$main$temp-273.15,
+               "C, humidity", data$main$humidity,", visibility",data$visibility,", and wind speed", data$wind$speed,".")
   return(info)
 }

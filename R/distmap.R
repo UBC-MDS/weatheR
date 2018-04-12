@@ -16,7 +16,7 @@
 distmap <- function(api, city1, city2) {
   require(geosphere)
   require(httr)
-  require(tidyverse)
+  require(dplyr)
 
   url <- paste0('http://api.openweathermap.org/data/2.5/weather?q=',city1,'&APPID=',api)
   ow <- content(GET(url))

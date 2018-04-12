@@ -19,6 +19,4 @@ A 2 by 2 plot latitude and longitude plot of points where the transparancy of th
 \description{
 Returns a plot of how dense clouds are in a given area
 }
-\examples{
-cloudmap(api, 'alberta', dense = 0.2 )
-}
+

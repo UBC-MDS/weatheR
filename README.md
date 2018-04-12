@@ -1,5 +1,3 @@
-[![Build Status](https://travis-ci.org/fyang95/weatheR.svg?branch=master)](https://travis-ci.org/fyang95/weatheR)
-
 # weatheR
     
 [![Build Status](https://travis-ci.org/UBC-MDS/weatheR.svg?branch=master)](https://travis-ci.org/UBC-MDS/weatheR)

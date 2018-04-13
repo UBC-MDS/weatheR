@@ -1,0 +1,37 @@
+---
+title: "weatheR"
+author: "Susan Fung, Ted Thompson, Tina Qian, Fang Yang"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+## Description
+This package provides four useful wrapper functions around the [OpenWeatherMap API](https://openweathermap.org/). The four functions are: `distmap()`, `cloudmap()`, `get_weather()`, `get_weather_four_days()` and `cwd()`.
+
+
+## Example
+```
+# load package
+library(weatheR)
+
+api <- "&APPID=8196eccade1594d99afd30e0924dca7d"
+
+# Calculate distance between two cities
+distmap(api, 'vancouver', 'toronto')
+
+# Returns a plot showing how dense clouds are in the area
+cloudmap(api, 'alberta', dense = 0.2 )
+
+# Returns weather forecast for the next 24 hours for selected city
+get_weather(api, vancouver):
+
+# Returns 4-day weather forecast for selected city
+get_weather_four_days(api, 'vancouver')
+
+# Get current weather description
+cwd(api,"vancouver")
+```

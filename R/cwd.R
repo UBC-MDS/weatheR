@@ -17,7 +17,7 @@ cwd<-function(key,location){
 
   # prepare url
   base<-"api.openweathermap.org/data/2.5/weather?q="
-  url<-paste0(base,location,key)
+  url<-paste0(base,location, "%appid=", key)
   # get information from API using the url
   text<-httr::GET(url)
   data<-httr::content(text)

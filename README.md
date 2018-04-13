@@ -11,7 +11,7 @@
 
 ### Overview
 
-This package provides four useful wrapper functions around the [OpenWeatherMap API](https://openweathermap.org/). The four functions are: `distmap()`, `cloudmap()`, `get_weather()` and `get_weather_four_days()`
+This package provides four useful wrapper functions around the [OpenWeatherMap API](https://openweathermap.org/). The four functions are: `distmap()`, `cloudmap()`, `get_weather()`, `get_weather_four_days()` and `cwd()`.
 
 * `distmap(api, 'city1', 'city2')`: Calculate distance between two cities
 
@@ -51,7 +51,19 @@ This package provides four useful wrapper functions around the [OpenWeatherMap A
 
     *Value:*
 
-    Data frame containing temp_min, temp_max, humidity and weather for the next 4 days in city local time. Temperature in Celsius      
+    Data frame containing temp_min, temp_max, humidity and weather for the next 4 days in city local time. Temperature in Celsius     
+
+  * `cwd(api, 'Vancouver' )`: Get current weather description
+
+      *Arguments:*
+
+      `api` -  API Key for openweathermap.org
+
+      `location` - A string, the location where you want to check the weather
+
+      *Value:*
+
+      A string that describe current weather in the location indicated   
 
 ### Installation
 
@@ -67,7 +79,7 @@ Simple example demonstrating the functionality of this package:
 # load package
 library(weatheR)
 
-api <- # Enter Your API here
+api <- "&APPID=8196eccade1594d99afd30e0924dca7d"
 
 # Calculate distance between two cities
 distmap(api, 'vancouver', 'toronto')
@@ -80,4 +92,7 @@ get_weather(api, city):
 
 # Returns 4-day weather forecast for selected city
 get_weather_four_days(api, 'Vancouver')
+
+# Get current weather description
+cwd(api,"Vancouver,CA")
 ```
